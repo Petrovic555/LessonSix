@@ -48,9 +48,9 @@ var app = {
 
 app.initialize();
     
-function openSite()
+function openSite(PeBoURL)
 {
-    var ref = window.open('http://shawacademy.com', '_blank', 'location=yes');
+    var ref = window.open(PeBoURL, '_blank', 'location=yes');
     ref.addEventListener('loadstart', function(event) { alert(event.url); });
 }
 
@@ -63,7 +63,7 @@ function geo()
     var onSuccess = function(position) {
         alert('Latitude: '          + position.coords.latitude          + '\n' +
               'Longitude: '         + position.coords.longitude         + '\n' +
-              'Altitude: '          + position.coords.altitude          + '\n' +
+              'Hoogte: '            + position.coords.altitude          + '\n' +
               'Accuracy: '          + position.coords.accuracy          + '\n' +
               'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
               'Heading: '           + position.coords.heading           + '\n' +
